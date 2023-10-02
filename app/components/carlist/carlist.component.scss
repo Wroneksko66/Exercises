@@ -1,0 +1,33 @@
+.main {
+  margin: auto;
+  &__list{
+    list-style-type: none;
+  }
+ &__delete{
+   display: flex;
+   justify-content: end;
+ }
+  &__car {
+    border-radius: 20px;
+    border: 1px solid grey;
+    height: 280px;
+    width: 250px;
+    padding: 20px;
+    margin: 20px auto;
+  }
+
+  &__title {
+    text-align: center;
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: space-between;
+  }
+
+}

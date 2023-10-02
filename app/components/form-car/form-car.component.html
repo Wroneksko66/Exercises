@@ -1,0 +1,60 @@
+<div class="container">
+  <h1>Add Car</h1>
+  <div class="form">
+    <form [formGroup]="carForm" (ngSubmit)="formSubmit()">
+      <div>
+        <mat-form-field class="" appearance="fill">
+          <mat-label>Company</mat-label>
+          <input formControlName="company" matInput placeholder="Enter company">
+        </mat-form-field>
+
+      </div>
+      <div>
+        <mat-form-field class="" appearance="fill">
+          <mat-label>Model</mat-label>
+          <input formControlName="model" matInput placeholder="Enter model">
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field class="" appearance="fill">
+          <mat-label>Year</mat-label>
+          <input formControlName="year" matInput placeholder="Enter year">
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field class="" appearance="fill">
+          <mat-label>Gearbox</mat-label>
+          <input formControlName="gearbox" matInput placeholder="Enter gearbox">
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field class="" appearance="fill">
+          <mat-label>Course</mat-label>
+          <input formControlName="course" matInput placeholder="Enter Course">
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field class="" appearance="fill">
+          <mat-label>Owner</mat-label>
+          <input formControlName="owner" matInput placeholder="Enter owner ">
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field class="" appearance="fill">
+          <mat-label>Location</mat-label>
+          <input formControlName="location" matInput placeholder="Enter location ">
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field class="" appearance="fill">
+          <mat-label>Price</mat-label>
+          <input formControlName="price" matInput placeholder="Enter price ">
+        </mat-form-field>
+      </div>
+
+      <button *ngIf="!car" type="submit" mat-button color="accent">Add</button>
+      <button *ngIf="car"  type="submit" mat-button color="accent" (click)="editCar()">Edit</button>
+    </form>
+  </div>
+
+</div>

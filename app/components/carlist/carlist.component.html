@@ -1,0 +1,24 @@
+<div class="main">
+  <ul class="main__list">
+    <li >
+      <div class="main__car" *ngFor="let car of cars">
+        <span class=" main__delete material-symbols-outlined ">close</span>
+        <h1 class="main__title">{{car.company}} <br> {{car.model}}</h1>
+        <div class="main__info">
+          <p> Year:{{car.year}}</p>
+          <p> Price:{{car.price | currency}}</p>
+        </div>
+        <div class="main__info">
+          <p> Owner:{{car.owner}}</p>
+          <p> Course:{{car.course}}</p>
+        </div>
+        <div class="main__btn">
+          <button mat-button color="primary" (click)="deleteCar(car.id)">Delete</button>
+          <a mat-button color="primary" [routerLink]='["/","editCar",car.id]'>Edit</a>
+          <button mat-button color="primary" (click)="openDialog(car.id)">More Info</button>
+        </div>
+      </div>
+    </li>
+  </ul>
+
+</div>

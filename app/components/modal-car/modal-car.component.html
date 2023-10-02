@@ -1,0 +1,27 @@
+<div class="modal">
+  <h1 class="modal__title" mat-dialog-title>{{data.company}} <br>{{data.model}} </h1>
+  <div mat-dialog-content>
+    <div class="modal__data">
+      <div class="modal__column">
+        <p>Gearbox -{{data.gearbox}}</p>
+        <p> Location -  {{data.location}}</p>
+        <p> Course -  {{data.course}}</p>
+
+
+      </div>
+      <div class="modal__column">
+        <p> Owner -  {{data.owner}}</p>
+        <p> Year -  {{data.year}}</p>
+        <p>Price - {{data.price | currency}}</p>
+
+
+      </div>
+    </div>
+  </div>
+
+  <div mat-dialog-actions>
+    <button mat-button (click)="onNoClick()" cdkFocusInitial>Ok</button>
+  </div>
+
+</div>
+
